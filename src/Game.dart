@@ -1,7 +1,5 @@
 part of LD28_GB_BH;
 
-
-
 class Game {
 	bool running;
 	GameTimer timer;
@@ -54,22 +52,22 @@ class GameTimer {
 		lt = now;
 		
 		while(delta >= 1) {
-		game.tick();
-		ticks++;
-		delta--;	
+			game.tick();
+			ticks++;
+			delta--;	
 		}
 		
 		game.render();
 		frames++;
 		
 		if(now - ltr >= 1000.0) {
-		print("$ticks tps, $frames fps");
-		ticks = 0;
-		frames = 0;
-		ltr += 1000;
-	}
+			print("$ticks tps, $frames fps");
+			ticks = 0;
+			frames = 0;
+			ltr += 1000;
+		}
 	
-	if(game.running)
-		window.requestAnimationFrame(update);
+		if(game.running)
+			window.requestAnimationFrame(update);
 	}
 }

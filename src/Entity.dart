@@ -37,6 +37,8 @@ class Entity {
 	Animator animator;
 	ImageElement texture;
 	
+	int direction;
+	
 	Entity(int x, int y) {
 		this.x = x;
 		this.y = y;
@@ -44,6 +46,7 @@ class Entity {
 		this.ay = 0;
 		
 		animator = new Animator(0, 4, 0, 15);
+		direction = 0;
 	
 		texture = Display.loadImage("../res/player.png");
 	}
@@ -53,6 +56,14 @@ class Entity {
 	}
 	
 	void render() {
-		Display.drawTiledImage(x, y, texture, animator.frame + 4 * 5, animator.tileWidth);
+		Display.drawTiledImage(x, y, texture, animator.frame + direction * 4, animator.tileWidth);
+	}
+}
+
+class Player extends Entity {
+	Player(int x, int y) : super(x, y);
+	
+	void tick() {
+		super.tick();
 	}
 }
