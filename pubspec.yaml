@@ -1,5 +1,6 @@
 name: LD28Remake
 description: A sample web application
 dependencies:
+  a_star: any
   browser: any
   vector_math: any

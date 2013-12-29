@@ -1,0 +1,12 @@
+DROID_AGE:
+	wave based survival game:
+		upgrades
+		"drive" a droid arround
+		limited ammo / energy
+		**GOAL light the entire area up.
+		pickups
+			health
+			speeds
+			lights
+			
+		
