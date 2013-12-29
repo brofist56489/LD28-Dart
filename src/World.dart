@@ -148,11 +148,11 @@ class World {
 				getTile(x, y).render(x, y, this);
 			}
 		}
-		
 		for(int i=0; i<entities.length; i++) {
 			Entity e = entities[i];
 			e.render();
 		}
+		
 		player.render();
 		
 		for(int y=miy; y<may; y++) {

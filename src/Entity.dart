@@ -40,7 +40,6 @@ abstract class Entity {
 	Animator animator;
 	ImageElement texture;
 	World world;
-	
 	bool alive = true;
 	
 	int direction;
